@@ -1,0 +1,163 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #2c3e50;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar nav ul li {
+    margin-left: 20px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    color: #f39c12;
+}
+
+.navbar .active {
+    color: #f39c12;
+}
+
+/* Voting Section */
+.vote-section {
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Division Styles */
+.division {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.division h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Team Styles */
+.team {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team label {
+    font-size: 18px;
+    font-weight: 500;
+    color: #2c3e50;
+    margin-right: 15px;
+}
+
+.vote-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.vote-btn:hover {
+    background-color: #2980b9;
+}
+
+#team-argentina input,
+#team-england input,
+#team-greece input,
+#team-ireland input,
+#team-japan input,
+#team-netherlands input,
+#team-portugal input,
+#team-russia input,
+#team-san-marino input,
+#team-vietnam input {
+    margin-right: 10px;
+}
+
+/* Vote Counter Styles */
+p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .vote-section {
+        width: 90%;
+    }
+
+    .team {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .team label {
+        margin-bottom: 10px;
+    }
+}
