@@ -1,0 +1,124 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #002868, #bf0a30); /* Blue to red */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover {
+    background-color: #ffcc00; /* Golden highlight */
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+    padding: 0 1rem;
+}
+
+/* Teams Section */
+.teams {
+    padding: 2rem;
+    background-color: white;
+    margin: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.teams h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #002868;
+    border-bottom: 2px solid #bf0a30;
+    padding-bottom: 0.3rem;
+}
+.teams ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+.teams ul li {
+    padding: 0.5rem;
+    margin: 0.2rem 0;
+    background-color: #f9f9f9;
+    border-left: 4px solid #ffcc00; /* Golden stripe */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Join Us Section */
+.join-us {
+    text-align: center;
+    padding: 2rem;
+    background-color: #002868;
+    color: white;
+}
+.join-us h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.join-us p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+.btn-join {
+    padding: 0.8rem 2rem;
+    background-color: #ffcc00;
+    color: #002868;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.btn-join:hover {
+    background-color: #ffd633;
+}
+
+/* Footer */
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
