@@ -1,58 +1,67 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const teamVotes = JSON.parse(localStorage.getItem("teamVotes")) || {};
-    const selectedTeam = localStorage.getItem("selectedTeam") || null;
+document.addEventListener("DOMContentLoaded", function () {
+    const voteButton = document.getElementById("submitVote");
+    const voteMessage = document.getElementById("voteMessage");
+    const votesList = document.getElementById("votesList");
 
-    // Initialize teams and set up vote counts
-    const teams = document.querySelectorAll('input[name="team"]');
-    teams.forEach((team) => {
-        const teamName = team.value;
-        if (!teamVotes[teamName]) teamVotes[teamName] = 0;
-    });
+    // Extract team names dynamically from the DOM
+    function getTeamNames() {
+        const teamInputs = document.querySelectorAll("input[name='team']");
+        const teams = {};
+        teamInputs.forEach(input => {
+            const teamName = input.value;
+            teams[teamName] = 0; // Initialize vote count to 0
+        });
+        return teams;
+    }
 
-    // Display votes
-    function displayVotes() {
-        teams.forEach((team) => {
-            const teamName = team.value;
-            const voteCount = teamVotes[teamName];
-            const voteDisplay = document.createElement("span");
-            voteDisplay.classList.add("vote-count");
-            voteDisplay.textContent = ` (${voteCount} votes)`;
+    // Initialize votes in localStorage if not already done
+    function initializeVotes() {
+        if (!localStorage.getItem("teamVotes")) {
+            const votes = getTeamNames();
+            localStorage.setItem("teamVotes", JSON.stringify(votes));
+        }
+    }
 
-            // Remove old vote count and re-add updated count
-            if (team.nextElementSibling.nextElementSibling) {
-                team.nextElementSibling.nextElementSibling.remove();
-            }
-            team.parentNode.appendChild(voteDisplay);
+    // Render votes in the UI
+    function renderVotes() {
+        const votes = JSON.parse(localStorage.getItem("teamVotes"));
+        votesList.innerHTML = ""; // Clear the current list
+        Object.keys(votes).forEach(team => {
+            const li = document.createElement("li");
+            li.textContent = `${team}: ${votes[team]} votes`;
+            votesList.appendChild(li);
         });
     }
 
-    // Highlight previously selected team
-    if (selectedTeam) {
-        const previousSelection = document.querySelector(`input[value="${selectedTeam}"]`);
-        if (previousSelection) previousSelection.checked = true;
-    }
+    // Handle vote submission
+    voteButton.addEventListener("click", function () {
+        const selectedTeam = document.querySelector("input[name='team']:checked");
+        if (!selectedTeam) {
+            voteMessage.textContent = "Please select a team to vote for!";
+            return;
+        }
 
-    // Handle team selection and vote changes
-    teams.forEach((team) => {
-        team.addEventListener("change", () => {
-            // Handle vote decrement for previous selection
-            if (selectedTeam) {
-                teamVotes[selectedTeam] = Math.max(0, teamVotes[selectedTeam] - 1);
-            }
+        const userVoteKey = "userVote";
+        const previousVote = localStorage.getItem(userVoteKey);
 
-            // Handle vote increment for current selection
-            const newSelection = team.value;
-            teamVotes[newSelection] += 1;
+        if (previousVote) {
+            voteMessage.textContent = "You have already voted! Changing votes is not allowed.";
+            return;
+        }
 
-            // Update selected team in localStorage
-            localStorage.setItem("selectedTeam", newSelection);
-            localStorage.setItem("teamVotes", JSON.stringify(teamVotes));
+        const votes = JSON.parse(localStorage.getItem("teamVotes"));
+        const teamName = selectedTeam.value;
 
-            // Update votes displayed
-            displayVotes();
-        });
+        // Increment the vote
+        votes[teamName] += 1;
+        localStorage.setItem("teamVotes", JSON.stringify(votes));
+        localStorage.setItem(userVoteKey, teamName);
+
+        voteMessage.textContent = `Thank you for voting for ${teamName}!`;
+        renderVotes();
     });
 
-    // Initial display
-    displayVotes();
+    // Initialize and render votes
+    initializeVotes();
+    renderVotes();
 });
