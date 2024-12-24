@@ -3,12 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const voteMessage = document.getElementById("voteMessage");
     const votesList = document.getElementById("votesList");
 
-    // Check if voteButton exists
-    if (!voteButton) {
-        console.error("Vote button not found in the DOM. Please check the HTML.");
-        return;
-    }
-
     // Extract team names dynamically from the DOM
     function getTeamNames() {
         const teamInputs = document.querySelectorAll("input[name='team']");
@@ -38,23 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
             li.textContent = `${team}: ${votes[team]} votes`;
             votesList.appendChild(li);
         });
-        console.log("Current votes:", votes);
-    }
-
-    // Log votes for inspection
-    function logVotesToNetwork() {
-        const votes = JSON.parse(localStorage.getItem("teamVotes"));
-        console.log("Logging votes for inspection...");
-        fetch("https://example.com/log-votes", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(votes)
-        })
-        .then(response => response.json())
-        .then(data => console.log("Votes logged successfully:", data))
-        .catch(error => console.error("Error logging votes:", error));
     }
 
     // Handle vote submission
@@ -83,14 +60,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         voteMessage.textContent = `Thank you for voting for ${teamName}!`;
         renderVotes();
-        logVotesToNetwork();
     });
 
     // Initialize and render votes
     initializeVotes();
     renderVotes();
 
-    // Attach the inspectVotes function to the window object
+    // Attach the inspectVotes function to the window object for debugging
     window.inspectVotes = function () {
         const votes = JSON.parse(localStorage.getItem("teamVotes"));
         console.log("Inspecting votes:", votes);
