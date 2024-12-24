@@ -52,6 +52,11 @@ section.voting ul li label {
     font-size: 1.1rem;
     cursor: pointer;
 }
+section.voting ul li .vote-count {
+    font-size: 1rem;
+    color: #bf0a30;
+    margin-left: 10px;
+}
 
 /* Footer */
 footer {
