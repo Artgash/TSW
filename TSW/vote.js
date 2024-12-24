@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!localStorage.getItem("teamVotes")) {
             const votes = getTeamNames();
             localStorage.setItem("teamVotes", JSON.stringify(votes));
+            console.log("Votes initialized:", votes);
         }
     }
 
@@ -31,6 +32,24 @@ document.addEventListener("DOMContentLoaded", function () {
             li.textContent = `${team}: ${votes[team]} votes`;
             votesList.appendChild(li);
         });
+        console.log("Current votes:", votes);
+    }
+
+    // Log votes for inspection
+    function logVotesToNetwork() {
+        const votes = JSON.parse(localStorage.getItem("teamVotes"));
+        console.log("Logging votes for inspection...");
+        // Simulate sending to a server or backend system
+        fetch("https://example.com/log-votes", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(votes)
+        })
+        .then(response => response.json())
+        .then(data => console.log("Votes logged successfully:", data))
+        .catch(error => console.error("Error logging votes:", error));
     }
 
     // Handle vote submission
@@ -59,9 +78,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
         voteMessage.textContent = `Thank you for voting for ${teamName}!`;
         renderVotes();
+        logVotesToNetwork();
     });
 
     // Initialize and render votes
     initializeVotes();
     renderVotes();
+
+    // Allow owner to inspect votes in the console
+    window.inspectVotes = function () {
+        const votes = JSON.parse(localStorage.getItem("teamVotes"));
+        console.log("Inspecting votes:", votes);
+        return votes;
+    };
+
+    console.log("You can use `inspectVotes()` in the console to view vote results.");
 });
