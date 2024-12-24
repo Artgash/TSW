@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const voteMessage = document.getElementById("voteMessage");
     const votesList = document.getElementById("votesList");
 
+    // Check if voteButton exists
+    if (!voteButton) {
+        console.error("Vote button not found in the DOM. Please check the HTML.");
+        return;
+    }
+
     // Extract team names dynamically from the DOM
     function getTeamNames() {
         const teamInputs = document.querySelectorAll("input[name='team']");
@@ -39,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function logVotesToNetwork() {
         const votes = JSON.parse(localStorage.getItem("teamVotes"));
         console.log("Logging votes for inspection...");
-        // Simulate sending to a server or backend system
         fetch("https://example.com/log-votes", {
             method: "POST",
             headers: {
