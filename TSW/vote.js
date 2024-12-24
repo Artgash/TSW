@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
     initializeVotes();
     renderVotes();
 
-    // Allow owner to inspect votes in the console
+    // Attach the inspectVotes function to the window object
     window.inspectVotes = function () {
         const votes = JSON.parse(localStorage.getItem("teamVotes"));
         console.log("Inspecting votes:", votes);
