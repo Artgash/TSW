@@ -7,14 +7,15 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* Navbar Styles */
 .navbar {
-    background-color: #2c3e50;
+    background-color: #003366; /* Dark Blue */
     padding: 20px;
     color: white;
     display: flex;
@@ -25,6 +26,7 @@ body {
 .navbar .logo {
     font-size: 24px;
     font-weight: bold;
+    color: #ff4d4d; /* Red */
 }
 
 .navbar nav ul {
@@ -44,11 +46,34 @@ body {
 }
 
 .navbar nav ul li a:hover {
-    color: #f39c12;
+    color: #ff4d4d; /* Red */
 }
 
 .navbar .active {
-    color: #f39c12;
+    color: #ff4d4d; /* Red */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #003366; /* Dark Blue */
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 8px rgba(255, 255, 255, 0.8);
+    color: #ff4d4d; /* Red */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #ffcc00; /* Yellow */
+    text-shadow: 2px 2px 5px rgba(255, 204, 0, 0.8);
 }
 
 /* Voting Section */
@@ -58,15 +83,9 @@ body {
     text-align: center;
 }
 
-h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #2c3e50;
-}
-
 /* Division Styles */
 .division {
-    background-color: #fff;
+    background-color: #f4f4f4;
     padding: 20px;
     margin: 20px 0;
     border-radius: 8px;
@@ -74,8 +93,8 @@ h1 {
 }
 
 .division h2 {
-    font-size: 28px;
-    color: #2c3e50;
+    font-size: 32px;
+    color: #003366; /* Dark Blue */
     margin-bottom: 20px;
 }
 
@@ -86,56 +105,49 @@ h1 {
     justify-content: space-between;
     margin-bottom: 15px;
     padding: 10px;
-    background-color: #ecf0f1;
+    background-color: #e9f1f7;
     border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .team label {
     font-size: 18px;
-    font-weight: 500;
-    color: #2c3e50;
+    font-weight: 600;
+    color: #003366; /* Dark Blue */
     margin-right: 15px;
 }
 
 .vote-btn {
-    background-color: #3498db;
+    background-color: #ff4d4d; /* Red */
     color: white;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+    font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .vote-btn:hover {
-    background-color: #2980b9;
+    background-color: #e60000; /* Darker Red */
 }
 
-#team-argentina input,
-#team-england input,
-#team-greece input,
-#team-ireland input,
-#team-japan input,
-#team-netherlands input,
-#team-portugal input,
-#team-russia input,
-#team-san-marino input,
-#team-vietnam input {
-    margin-right: 10px;
+.vote-btn:active {
+    transform: scale(0.95);
 }
 
 /* Vote Counter Styles */
 p {
     font-size: 16px;
     font-weight: 500;
-    color: #2c3e50;
+    color: #003366; /* Dark Blue */
+    margin-top: 10px;
 }
 
 /* Footer Styles */
 .footer {
-    background-color: #2c3e50;
+    background-color: #003366; /* Dark Blue */
     color: white;
     text-align: center;
     padding: 20px;
