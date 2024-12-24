@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TSW Voting</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="vote.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -37,56 +37,39 @@
             <li><input type="radio" name="team" value="Greece" id="Greece"><label for="Greece">Greece</label></li>
             <li><input type="radio" name="team" value="Ireland" id="Ireland"><label for="Ireland">Ireland</label></li>
             <li><input type="radio" name="team" value="Japan" id="Japan"><label for="Japan">Japan</label></li>
-            <li><input type="radio" name="team" value="Netherlands" id="Netherlands"><label for="Netherlands">Netherlands</label></li>
-            <li><input type="radio" name="team" value="Portugal" id="Portugal"><label for="Portugal">Portugal</label></li>
-            <li><input type="radio" name="team" value="Russia" id="Russia"><label for="Russia">Russia</label></li>
-            <li><input type="radio" name="team" value="San Marino" id="San Marino"><label for="San Marino">San Marino</label></li>
-            <li><input type="radio" name="team" value="Vietnam" id="Vietnam"><label for="Vietnam">Vietnam</label></li>
         </ul>
 
         <h2>Division 2 Teams</h2>
         <ul id="division-2">
             <li><input type="radio" name="team" value="Belgium" id="Belgium"><label for="Belgium">Belgium</label></li>
-            <li><input type="radio" name="team" value="Croatia" id="Croatia"><label for="Croatia">Croatia</label></li>
             <li><input type="radio" name="team" value="France" id="France"><label for="France">France</label></li>
             <li><input type="radio" name="team" value="Italy" id="Italy"><label for="Italy">Italy</label></li>
-            <li><input type="radio" name="team" value="Mexico" id="Mexico"><label for="Mexico">Mexico</label></li>
-            <li><input type="radio" name="team" value="Norway" id="Norway"><label for="Norway">Norway</label></li>
-            <li><input type="radio" name="team" value="South Korea" id="South Korea"><label for="South Korea">South Korea</label></li>
             <li><input type="radio" name="team" value="Spain" id="Spain"><label for="Spain">Spain</label></li>
-            <li><input type="radio" name="team" value="Ukraine" id="Ukraine"><label for="Ukraine">Ukraine</label></li>
             <li><input type="radio" name="team" value="USA" id="USA"><label for="USA">USA</label></li>
         </ul>
 
         <h2>Division 3 Teams</h2>
         <ul id="division-3">
             <li><input type="radio" name="team" value="China" id="China"><label for="China">China</label></li>
-            <li><input type="radio" name="team" value="Qatar" id="Qatar"><label for="Qatar">Qatar</label></li>
             <li><input type="radio" name="team" value="India" id="India"><label for="India">India</label></li>
-            <li><input type="radio" name="team" value="Morocco" id="Morocco"><label for="Morocco">Morocco</label></li>
             <li><input type="radio" name="team" value="Canada" id="Canada"><label for="Canada">Canada</label></li>
             <li><input type="radio" name="team" value="Germany" id="Germany"><label for="Germany">Germany</label></li>
-            <li><input type="radio" name="team" value="Turkey" id="Turkey"><label for="Turkey">Turkey</label></li>
-            <li><input type="radio" name="team" value="Saudi Arabia" id="Saudi Arabia"><label for="Saudi Arabia">Saudi Arabia</label></li>
-            <li><input type="radio" name="team" value="Senegal" id="Senegal"><label for="Senegal">Senegal</label></li>
-            <li><input type="radio" name="team" value="North Korea" id="North Korea"><label for="North Korea">North Korea</label></li>
-            <li><input type="radio" name="team" value="Serbia" id="Serbia"><label for="Serbia">Serbia</label></li>
             <li><input type="radio" name="team" value="Brazil" id="Brazil"><label for="Brazil">Brazil</label></li>
         </ul>
 
         <h2>Division 4 Teams</h2>
         <ul id="division-4">
             <li><input type="radio" name="team" value="Australia" id="Australia"><label for="Australia">Australia</label></li>
-            <li><input type="radio" name="team" value="Costa Rica" id="Costa Rica"><label for="Costa Rica">Costa Rica</label></li>
             <li><input type="radio" name="team" value="South Africa" id="South Africa"><label for="South Africa">South Africa</label></li>
             <li><input type="radio" name="team" value="Colombia" id="Colombia"><label for="Colombia">Colombia</label></li>
             <li><input type="radio" name="team" value="Iran" id="Iran"><label for="Iran">Iran</label></li>
             <li><input type="radio" name="team" value="Peru" id="Peru"><label for="Peru">Peru</label></li>
-            <li><input type="radio" name="team" value="Uruguay" id="Uruguay"><label for="Uruguay">Uruguay</label></li>
-            <li><input type="radio" name="team" value="Scotland" id="Scotland"><label for="Scotland">Scotland</label></li>
-            <li><input type="radio" name="team" value="China2" id="China2"><label for="China2">China</label></li>
-            <li><input type="radio" name="team" value="Senegal2" id="Senegal2"><label for="Senegal2">Senegal</label></li>
         </ul>
+
+        <button id="submitVote">Submit Vote</button>
+        <h3 id="voteMessage"></h3>
+        <h3>Votes:</h3>
+        <ul id="votesList"></ul>
     </section>
 
     <!-- Footer -->
