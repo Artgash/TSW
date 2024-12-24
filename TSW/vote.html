@@ -3,296 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vote for Your Favorite Team</title>
+    <title>TSW Voting</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="vote.css">
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Hero Section -->
     <header class="navbar">
-        <div class="logo">TSW Voting</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="teams.html">Teams</a></li>
-                <li><a href="join.html">Join Us</a></li>
-                <li><a href="vote.html" class="active">Vote</a></li>
-            </ul>
-        </nav>
+        <h1>Vote for Your Favorite Team</h1>
     </header>
 
     <!-- Voting Section -->
-    <section class="vote-section">
-        <h1>Vote for Your Favorite Team</h1>
+    <section class="voting">
+        <h2>Division 1 Teams</h2>
+        <ul id="division-1">
+            <li><input type="radio" name="team" value="Argentina" id="Argentina"><label for="Argentina">Argentina</label></li>
+            <li><input type="radio" name="team" value="England" id="England"><label for="England">England</label></li>
+            <li><input type="radio" name="team" value="Greece" id="Greece"><label for="Greece">Greece</label></li>
+            <li><input type="radio" name="team" value="Ireland" id="Ireland"><label for="Ireland">Ireland</label></li>
+            <li><input type="radio" name="team" value="Japan" id="Japan"><label for="Japan">Japan</label></li>
+            <li><input type="radio" name="team" value="Netherlands" id="Netherlands"><label for="Netherlands">Netherlands</label></li>
+            <li><input type="radio" name="team" value="Portugal" id="Portugal"><label for="Portugal">Portugal</label></li>
+            <li><input type="radio" name="team" value="Russia" id="Russia"><label for="Russia">Russia</label></li>
+            <li><input type="radio" name="team" value="San Marino" id="San Marino"><label for="San Marino">San Marino</label></li>
+            <li><input type="radio" name="team" value="Vietnam" id="Vietnam"><label for="Vietnam">Vietnam</label></li>
+        </ul>
 
-        <!-- Division 1 -->
-        <div class="division">
-            <h2>Division 1</h2>
-            <div class="team" id="team-argentina">
-                <input type="radio" id="argentina" name="team" value="Argentina">
-                <label for="argentina">Argentina</label>
-                <button class="vote-btn" onclick="vote('Argentina', 1)">Vote</button>
-                <p id="argentina-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-england">
-                <input type="radio" id="england" name="team" value="England">
-                <label for="england">England</label>
-                <button class="vote-btn" onclick="vote('England', 1)">Vote</button>
-                <p id="england-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-greece">
-                <input type="radio" id="greece" name="team" value="Greece">
-                <label for="greece">Greece</label>
-                <button class="vote-btn" onclick="vote('Greece', 1)">Vote</button>
-                <p id="greece-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-ireland">
-                <input type="radio" id="ireland" name="team" value="Ireland">
-                <label for="ireland">Ireland</label>
-                <button class="vote-btn" onclick="vote('Ireland', 1)">Vote</button>
-                <p id="ireland-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-japan">
-                <input type="radio" id="japan" name="team" value="Japan">
-                <label for="japan">Japan</label>
-                <button class="vote-btn" onclick="vote('Japan', 1)">Vote</button>
-                <p id="japan-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-netherlands">
-                <input type="radio" id="netherlands" name="team" value="Netherlands">
-                <label for="netherlands">Netherlands</label>
-                <button class="vote-btn" onclick="vote('Netherlands', 1)">Vote</button>
-                <p id="netherlands-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-portugal">
-                <input type="radio" id="portugal" name="team" value="Portugal">
-                <label for="portugal">Portugal</label>
-                <button class="vote-btn" onclick="vote('Portugal', 1)">Vote</button>
-                <p id="portugal-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-russia">
-                <input type="radio" id="russia" name="team" value="Russia">
-                <label for="russia">Russia</label>
-                <button class="vote-btn" onclick="vote('Russia', 1)">Vote</button>
-                <p id="russia-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-san-marino">
-                <input type="radio" id="san-marino" name="team" value="San Marino">
-                <label for="san-marino">San Marino</label>
-                <button class="vote-btn" onclick="vote('San Marino', 1)">Vote</button>
-                <p id="san-marino-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-vietnam">
-                <input type="radio" id="vietnam" name="team" value="Vietnam">
-                <label for="vietnam">Vietnam</label>
-                <button class="vote-btn" onclick="vote('Vietnam', 1)">Vote</button>
-                <p id="vietnam-votes">Votes: 0</p>
-            </div>
-        </div>
+        <h2>Division 2 Teams</h2>
+        <ul id="division-2">
+            <li><input type="radio" name="team" value="Belgium" id="Belgium"><label for="Belgium">Belgium</label></li>
+            <li><input type="radio" name="team" value="Croatia" id="Croatia"><label for="Croatia">Croatia</label></li>
+            <li><input type="radio" name="team" value="France" id="France"><label for="France">France</label></li>
+            <li><input type="radio" name="team" value="Italy" id="Italy"><label for="Italy">Italy</label></li>
+            <li><input type="radio" name="team" value="Mexico" id="Mexico"><label for="Mexico">Mexico</label></li>
+            <li><input type="radio" name="team" value="Norway" id="Norway"><label for="Norway">Norway</label></li>
+            <li><input type="radio" name="team" value="South Korea" id="South Korea"><label for="South Korea">South Korea</label></li>
+            <li><input type="radio" name="team" value="Spain" id="Spain"><label for="Spain">Spain</label></li>
+            <li><input type="radio" name="team" value="Ukraine" id="Ukraine"><label for="Ukraine">Ukraine</label></li>
+            <li><input type="radio" name="team" value="USA" id="USA"><label for="USA">USA</label></li>
+        </ul>
 
-        <!-- Division 2 -->
-        <div class="division">
-            <h2>Division 2</h2>
-            <div class="team" id="team-belgium">
-                <input type="radio" id="belgium" name="team" value="Belgium">
-                <label for="belgium">Belgium</label>
-                <button class="vote-btn" onclick="vote('Belgium', 2)">Vote</button>
-                <p id="belgium-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-croatia">
-                <input type="radio" id="croatia" name="team" value="Croatia">
-                <label for="croatia">Croatia</label>
-                <button class="vote-btn" onclick="vote('Croatia', 2)">Vote</button>
-                <p id="croatia-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-france">
-                <input type="radio" id="france" name="team" value="France">
-                <label for="france">France</label>
-                <button class="vote-btn" onclick="vote('France', 2)">Vote</button>
-                <p id="france-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-italy">
-                <input type="radio" id="italy" name="team" value="Italy">
-                <label for="italy">Italy</label>
-                <button class="vote-btn" onclick="vote('Italy', 2)">Vote</button>
-                <p id="italy-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-mexico">
-                <input type="radio" id="mexico" name="team" value="Mexico">
-                <label for="mexico">Mexico</label>
-                <button class="vote-btn" onclick="vote('Mexico', 2)">Vote</button>
-                <p id="mexico-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-norway">
-                <input type="radio" id="norway" name="team" value="Norway">
-                <label for="norway">Norway</label>
-                <button class="vote-btn" onclick="vote('Norway', 2)">Vote</button>
-                <p id="norway-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-south-korea">
-                <input type="radio" id="south-korea" name="team" value="South Korea">
-                <label for="south-korea">South Korea</label>
-                <button class="vote-btn" onclick="vote('South Korea', 2)">Vote</button>
-                <p id="south-korea-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-spain">
-                <input type="radio" id="spain" name="team" value="Spain">
-                <label for="spain">Spain</label>
-                <button class="vote-btn" onclick="vote('Spain', 2)">Vote</button>
-                <p id="spain-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-ukraine">
-                <input type="radio" id="ukraine" name="team" value="Ukraine">
-                <label for="ukraine">Ukraine</label>
-                <button class="vote-btn" onclick="vote('Ukraine', 2)">Vote</button>
-                <p id="ukraine-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-usa">
-                <input type="radio" id="usa" name="team" value="USA">
-                <label for="usa">USA</label>
-                <button class="vote-btn" onclick="vote('USA', 2)">Vote</button>
-                <p id="usa-votes">Votes: 0</p>
-            </div>
-        </div>
+        <h2>Division 3 Teams</h2>
+        <ul id="division-3">
+            <li><input type="radio" name="team" value="China" id="China"><label for="China">China</label></li>
+            <li><input type="radio" name="team" value="Qatar" id="Qatar"><label for="Qatar">Qatar</label></li>
+            <li><input type="radio" name="team" value="India" id="India"><label for="India">India</label></li>
+            <li><input type="radio" name="team" value="Morocco" id="Morocco"><label for="Morocco">Morocco</label></li>
+            <li><input type="radio" name="team" value="Canada" id="Canada"><label for="Canada">Canada</label></li>
+            <li><input type="radio" name="team" value="Germany" id="Germany"><label for="Germany">Germany</label></li>
+            <li><input type="radio" name="team" value="Turkey" id="Turkey"><label for="Turkey">Turkey</label></li>
+            <li><input type="radio" name="team" value="Saudi Arabia" id="Saudi Arabia"><label for="Saudi Arabia">Saudi Arabia</label></li>
+            <li><input type="radio" name="team" value="Senegal" id="Senegal"><label for="Senegal">Senegal</label></li>
+            <li><input type="radio" name="team" value="North Korea" id="North Korea"><label for="North Korea">North Korea</label></li>
+            <li><input type="radio" name="team" value="Serbia" id="Serbia"><label for="Serbia">Serbia</label></li>
+            <li><input type="radio" name="team" value="Brazil" id="Brazil"><label for="Brazil">Brazil</label></li>
+        </ul>
 
-        <!-- Division 3 -->
-        <div class="division">
-            <h2>Division 3</h2>
-            <div class="team" id="team-china">
-                <input type="radio" id="china" name="team" value="China">
-                <label for="china">China</label>
-                <button class="vote-btn" onclick="vote('China', 3)">Vote</button>
-                <p id="china-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-qatar">
-                <input type="radio" id="qatar" name="team" value="Qatar">
-                <label for="qatar">Qatar</label>
-                <button class="vote-btn" onclick="vote('Qatar', 3)">Vote</button>
-                <p id="qatar-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-india">
-                <input type="radio" id="india" name="team" value="India">
-                <label for="india">India</label>
-                <button class="vote-btn" onclick="vote('India', 3)">Vote</button>
-                <p id="india-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-morocco">
-                <input type="radio" id="morocco" name="team" value="Morocco">
-                <label for="morocco">Morocco</label>
-                <button class="vote-btn" onclick="vote('Morocco', 3)">Vote</button>
-                <p id="morocco-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-canada">
-                <input type="radio" id="canada" name="team" value="Canada">
-                <label for="canada">Canada</label>
-                <button class="vote-btn" onclick="vote('Canada', 3)">Vote</button>
-                <p id="canada-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-germany">
-                <input type="radio" id="germany" name="team" value="Germany">
-                <label for="germany">Germany</label>
-                <button class="vote-btn" onclick="vote('Germany', 3)">Vote</button>
-                <p id="germany-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-turkey">
-                <input type="radio" id="turkey" name="team" value="Turkey">
-                <label for="turkey">Turkey</label>
-                <button class="vote-btn" onclick="vote('Turkey', 3)">Vote</button>
-                <p id="turkey-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-saudi-arabia">
-                <input type="radio" id="saudi-arabia" name="team" value="Saudi Arabia">
-                <label for="saudi-arabia">Saudi Arabia</label>
-                <button class="vote-btn" onclick="vote('Saudi Arabia', 3)">Vote</button>
-                <p id="saudi-arabia-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-senegal">
-                <input type="radio" id="senegal" name="team" value="Senegal">
-                <label for="senegal">Senegal</label>
-                <button class="vote-btn" onclick="vote('Senegal', 3)">Vote</button>
-                <p id="senegal-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-north-korea">
-                <input type="radio" id="north-korea" name="team" value="North Korea">
-                <label for="north-korea">North Korea</label>
-                <button class="vote-btn" onclick="vote('North Korea', 3)">Vote</button>
-                <p id="north-korea-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-serbia">
-                <input type="radio" id="serbia" name="team" value="Serbia">
-                <label for="serbia">Serbia</label>
-                <button class="vote-btn" onclick="vote('Serbia', 3)">Vote</button>
-                <p id="serbia-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-brazil">
-                <input type="radio" id="brazil" name="team" value="Brazil">
-                <label for="brazil">Brazil</label>
-                <button class="vote-btn" onclick="vote('Brazil', 3)">Vote</button>
-                <p id="brazil-votes">Votes: 0</p>
-            </div>
-        </div>
-
-        <!-- Division 4 -->
-        <div class="division">
-            <h2>Division 4</h2>
-            <div class="team" id="team-australia">
-                <input type="radio" id="australia" name="team" value="Australia">
-                <label for="australia">Australia</label>
-                <button class="vote-btn" onclick="vote('Australia', 4)">Vote</button>
-                <p id="australia-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-costa-rica">
-                <input type="radio" id="costa-rica" name="team" value="Costa Rica">
-                <label for="costa-rica">Costa Rica</label>
-                <button class="vote-btn" onclick="vote('Costa Rica', 4)">Vote</button>
-                <p id="costa-rica-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-south-africa">
-                <input type="radio" id="south-africa" name="team" value="South Africa">
-                <label for="south-africa">South Africa</label>
-                <button class="vote-btn" onclick="vote('South Africa', 4)">Vote</button>
-                <p id="south-africa-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-colombia">
-                <input type="radio" id="colombia" name="team" value="Colombia">
-                <label for="colombia">Colombia</label>
-                <button class="vote-btn" onclick="vote('Colombia', 4)">Vote</button>
-                <p id="colombia-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-iran">
-                <input type="radio" id="iran" name="team" value="Iran">
-                <label for="iran">Iran</label>
-                <button class="vote-btn" onclick="vote('Iran', 4)">Vote</button>
-                <p id="iran-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-peru">
-                <input type="radio" id="peru" name="team" value="Peru">
-                <label for="peru">Peru</label>
-                <button class="vote-btn" onclick="vote('Peru', 4)">Vote</button>
-                <p id="peru-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-uruguay">
-                <input type="radio" id="uruguay" name="team" value="Uruguay">
-                <label for="uruguay">Uruguay</label>
-                <button class="vote-btn" onclick="vote('Uruguay', 4)">Vote</button>
-                <p id="uruguay-votes">Votes: 0</p>
-            </div>
-            <div class="team" id="team-scotland">
-                <input type="radio" id="scotland" name="team" value="Scotland">
-                <label for="scotland">Scotland</label>
-                <button class="vote-btn" onclick="vote('Scotland', 4)">Vote</button>
-                <p id="scotland-votes">Votes: 0</p>
-            </div>
-        </div>
+        <h2>Division 4 Teams</h2>
+        <ul id="division-4">
+            <li><input type="radio" name="team" value="Australia" id="Australia"><label for="Australia">Australia</label></li>
+            <li><input type="radio" name="team" value="Costa Rica" id="Costa Rica"><label for="Costa Rica">Costa Rica</label></li>
+            <li><input type="radio" name="team" value="South Africa" id="South Africa"><label for="South Africa">South Africa</label></li>
+            <li><input type="radio" name="team" value="Colombia" id="Colombia"><label for="Colombia">Colombia</label></li>
+            <li><input type="radio" name="team" value="Iran" id="Iran"><label for="Iran">Iran</label></li>
+            <li><input type="radio" name="team" value="Peru" id="Peru"><label for="Peru">Peru</label></li>
+            <li><input type="radio" name="team" value="Uruguay" id="Uruguay"><label for="Uruguay">Uruguay</label></li>
+            <li><input type="radio" name="team" value="Scotland" id="Scotland"><label for="Scotland">Scotland</label></li>
+            <li><input type="radio" name="team" value="China2" id="China2"><label for="China2">China</label></li>
+            <li><input type="radio" name="team" value="Senegal2" id="Senegal2"><label for="Senegal2">Senegal</label></li>
+        </ul>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <p>© 2024 TSW. All Rights Reserved.</p>
     </footer>
-
     <script src="vote.js"></script>
 </body>
 </html>
