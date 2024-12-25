@@ -94,6 +94,16 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Image Style */
+.section-img {
+    width: 100%; /* Ensures the image takes up the full width of its container */
+    max-width: 600px; /* Set a max width to prevent stretching */
+    height: auto; /* Maintains aspect ratio */
+    margin-top: 1.5rem; /* Adds space between the content and the image */
+    border-radius: 10px; /* Rounds the corners of the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for the image */
+}
+
 /* Footer */
 .footer {
     background-color: #222;
@@ -130,5 +140,11 @@ body {
 
     .section h3 {
         font-size: 1.3rem;
+    }
+
+    /* Image on smaller screens */
+    .section-img {
+        width: 100%; /* Ensures image scales on smaller screens */
+        max-width: 100%; /* Max width is now 100% */
     }
 }
