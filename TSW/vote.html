@@ -3,79 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TSW Voting</title>
+    <title>News | TSW</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="vote.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #1d1f27;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .container {
+            display: grid;
+            place-items: center;
+            text-align: center;
+        }
+
+        .blocks-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 5px;
+        }
+
+        .block {
+            width: 100%;
+            height: 100%;
+            background: #444;
+            animation: slideIn 2s ease forwards;
+            opacity: 0;
+        }
+
+        /* Dynamic animation for blocks */
+        .block:nth-child(1) { animation-delay: 0s; }
+        .block:nth-child(2) { animation-delay: 0.2s; }
+        .block:nth-child(3) { animation-delay: 0.4s; }
+        .block:nth-child(4) { animation-delay: 0.6s; }
+        .block:nth-child(5) { animation-delay: 0.8s; }
+        .block:nth-child(6) { animation-delay: 1s; }
+        .block:nth-child(7) { animation-delay: 1.2s; }
+        .block:nth-child(8) { animation-delay: 1.4s; }
+        .block:nth-child(9) { animation-delay: 1.6s; }
+        .block:nth-child(10) { animation-delay: 1.8s; }
+        .block:nth-child(11) { animation-delay: 2s; }
+        .block:nth-child(12) { animation-delay: 2.2s; }
+        .block:nth-child(13) { animation-delay: 2.4s; }
+        .block:nth-child(14) { animation-delay: 2.6s; }
+        .block:nth-child(15) { animation-delay: 2.8s; }
+        .block:nth-child(16) { animation-delay: 3s; }
+
+        @keyframes slideIn {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Text Styling */
+        .coming-soon {
+            margin-top: 20px;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            animation: fadeInText 3.5s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <header class="navbar">
-        <div class="logo">TSW Voting</div>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="teams.html">Teams</a></li>
-                <li><a href="votes.html" class="active">Votes</a></li>
-                <li><a href="join.html">Join Us</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <header class="hero">
-        <h1>Vote for Your Favorite Team</h1>
-    </header>
-
-    <!-- Voting Section -->
-    <section class="voting">
-        <h2>Division 1 Teams</h2>
-        <ul id="division-1">
-            <li><input type="radio" name="team" value="Argentina" id="Argentina"><label for="Argentina">Argentina</label></li>
-            <li><input type="radio" name="team" value="England" id="England"><label for="England">England</label></li>
-            <li><input type="radio" name="team" value="Greece" id="Greece"><label for="Greece">Greece</label></li>
-            <li><input type="radio" name="team" value="Ireland" id="Ireland"><label for="Ireland">Ireland</label></li>
-            <li><input type="radio" name="team" value="Japan" id="Japan"><label for="Japan">Japan</label></li>
-        </ul>
-
-        <h2>Division 2 Teams</h2>
-        <ul id="division-2">
-            <li><input type="radio" name="team" value="Belgium" id="Belgium"><label for="Belgium">Belgium</label></li>
-            <li><input type="radio" name="team" value="France" id="France"><label for="France">France</label></li>
-            <li><input type="radio" name="team" value="Italy" id="Italy"><label for="Italy">Italy</label></li>
-            <li><input type="radio" name="team" value="Spain" id="Spain"><label for="Spain">Spain</label></li>
-            <li><input type="radio" name="team" value="USA" id="USA"><label for="USA">USA</label></li>
-        </ul>
-
-        <h2>Division 3 Teams</h2>
-        <ul id="division-3">
-            <li><input type="radio" name="team" value="China" id="China"><label for="China">China</label></li>
-            <li><input type="radio" name="team" value="India" id="India"><label for="India">India</label></li>
-            <li><input type="radio" name="team" value="Canada" id="Canada"><label for="Canada">Canada</label></li>
-            <li><input type="radio" name="team" value="Germany" id="Germany"><label for="Germany">Germany</label></li>
-            <li><input type="radio" name="team" value="Brazil" id="Brazil"><label for="Brazil">Brazil</label></li>
-        </ul>
-
-        <h2>Division 4 Teams</h2>
-        <ul id="division-4">
-            <li><input type="radio" name="team" value="Australia" id="Australia"><label for="Australia">Australia</label></li>
-            <li><input type="radio" name="team" value="South Africa" id="South Africa"><label for="South Africa">South Africa</label></li>
-            <li><input type="radio" name="team" value="Colombia" id="Colombia"><label for="Colombia">Colombia</label></li>
-            <li><input type="radio" name="team" value="Iran" id="Iran"><label for="Iran">Iran</label></li>
-            <li><input type="radio" name="team" value="Peru" id="Peru"><label for="Peru">Peru</label></li>
-        </ul>
-
-        <button id="submitVote">Submit Vote</button>
-        <h3 id="voteMessage"></h3>
-        <h3>Votes:</h3>
-        <ul id="votesList"></ul>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 TSW. All Rights Reserved.</p>
-    </footer>
-    <script src="vote.js"></script>
+    <div class="container">
+        <div class="blocks-container">
+            <!-- Create 16 blocks -->
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+        </div>
+        <div class="coming-soon">COMING SOON...</div>
+    </div>
 </body>
 </html>
