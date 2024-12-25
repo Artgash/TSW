@@ -1,74 +1,185 @@
-/* Reset and Basic Styles */
-body, ul, li {
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    list-style: none;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Body Styling */
 body {
-    background-color: #f4f4f4;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Navigation Bar */
 .navbar {
-    background-color: #333;
-    padding: 1rem;
-    text-align: center;
+    background: linear-gradient(135deg, red, blue);
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.navbar:hover {
+    background: linear-gradient(135deg, blue, red);
 }
 
 .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: yellow;
+    transform: scale(1.1);
+}
+
+.navbar::after {
+    content: "Coming Soon";
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+    animation: slideIn 2s ease-out infinite;
+}
+
+/* Navbar Coming Soon Animation */
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.8;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+/* Main Content */
+main {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-}
-
-.navbar a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s;
-}
-
-.navbar a:hover {
-    color: #ff6347;
+    align-items: center;
+    flex-direction: column;
+    min-height: 80vh;
 }
 
 /* Construction Animation */
 .construction-animation {
     display: flex;
+    gap: 15px;
     justify-content: center;
-    align-items: flex-end;
-    height: 70vh;
-    gap: 10px;
-    padding: 2rem;
+    align-items: flex-start;
+    position: relative;
 }
 
 .block {
-    width: 50px;
-    height: 50px;
-    background-color: #ff6347;
-    animation: build 2s ease-in-out infinite;
-    opacity: 0;
+    width: 70px;
+    height: 150px;
+    background-color: #e0e0e0;
+    animation: build 1.8s ease-in-out infinite;
+    border-radius: 10px;
+    position: relative;
 }
 
-.block1 { animation-delay: 0s; }
-.block2 { animation-delay: 0.5s; }
-.block3 { animation-delay: 1s; }
-.block4 { animation-delay: 1.5s; }
-.block5 { animation-delay: 2s; }
+.block1 {
+    animation-delay: 0s;
+}
 
+.block2 {
+    animation-delay: 0.3s;
+}
+
+.block3 {
+    animation-delay: 0.6s;
+}
+
+.block4 {
+    animation-delay: 0.9s;
+}
+
+.block5 {
+    animation-delay: 1.2s;
+}
+
+/* Block Construction Animation */
 @keyframes build {
-    0% {
-        transform: translateY(100px);
-        opacity: 0;
+    0%, 100% {
+        opacity: 0.6;
+        transform: translateY(10px) scale(1);
     }
     50% {
-        transform: translateY(0);
         opacity: 1;
+        transform: translateY(0) scale(1.1);
     }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
+}
+
+/* Block Color Transitions */
+.block:nth-child(odd) {
+    background: linear-gradient(45deg, red, orange);
+}
+
+.block:nth-child(even) {
+    background: linear-gradient(45deg, blue, purple);
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 25px;
+    color: #555;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .construction-animation {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .block {
+        width: 50px;
+        height: 120px;
     }
 }
