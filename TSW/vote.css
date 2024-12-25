@@ -18,7 +18,22 @@ body {
     justify-content: space-between;
 }
 
-/* Navigation Bar */
+/* Coming Soon Section */
+.coming-soon {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.coming-soon h1 {
+    font-size: 3em;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: slideIn 2s ease-out forwards;
+}
+
+/* Navbar */
 .navbar {
     background: linear-gradient(135deg, red, blue);
     padding: 20px;
@@ -27,7 +42,7 @@ body {
     top: 0;
     z-index: 10;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centering the navbar */
     align-items: center;
     transition: background 0.3s ease;
 }
@@ -57,17 +72,6 @@ body {
 .navbar ul li a:hover {
     color: yellow;
     transform: scale(1.1);
-}
-
-.navbar::after {
-    content: "Coming Soon";
-    font-size: 14px;
-    color: white;
-    font-weight: bold;
-    position: absolute;
-    bottom: -25px;
-    right: 0;
-    animation: slideIn 2s ease-out infinite;
 }
 
 /* Navbar Coming Soon Animation */
@@ -181,5 +185,9 @@ footer {
     .block {
         width: 50px;
         height: 120px;
+    }
+
+    .coming-soon h1 {
+        font-size: 2.5em;
     }
 }
