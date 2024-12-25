@@ -1,78 +1,74 @@
-/* Reset Styles */
-body, ul, li, h2, p {
+/* Reset and Basic Styles */
+body, ul, li {
     margin: 0;
     padding: 0;
     list-style: none;
     font-family: Arial, sans-serif;
 }
 
-/* Navbar Styles */
+body {
+    background-color: #f4f4f4;
+}
+
+/* Navigation Bar */
 .navbar {
-    background-color: red;
-    display: flex;
-    justify-content: center;
-    padding: 1rem 0;
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
 }
 
 .navbar ul {
     display: flex;
+    justify-content: center;
     gap: 1.5rem;
 }
 
 .navbar a {
+    color: #fff;
     text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s, color 0.3s;
+    font-size: 1.1rem;
+    transition: color 0.3s;
 }
 
 .navbar a:hover {
-    background-color: white;
-    color: red;
-    border-radius: 5px;
+    color: #ff6347;
 }
 
-.navbar a:active, .navbar a:focus {
-    background-color: blue;
-    color: white;
-    border-radius: 5px;
-}
-
-/* Section Styles */
-.construction {
+/* Construction Animation */
+.construction-animation {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    align-items: flex-end;
+    height: 70vh;
+    gap: 10px;
     padding: 2rem;
-    flex-wrap: wrap;
-    background: #f5f5f5;
 }
 
-/* Block Styles */
 .block {
-    background: linear-gradient(135deg, red, blue);
-    color: white;
-    border-radius: 10px;
-    width: 300px;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    animation: pulse 2s infinite;
+    width: 50px;
+    height: 50px;
+    background-color: #ff6347;
+    animation: build 2s ease-in-out infinite;
+    opacity: 0;
 }
 
-/* Heading inside Block */
-.block h2 {
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
-}
+.block1 { animation-delay: 0s; }
+.block2 { animation-delay: 0.5s; }
+.block3 { animation-delay: 1s; }
+.block4 { animation-delay: 1.5s; }
+.block5 { animation-delay: 2s; }
 
-/* Animation */
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
+@keyframes build {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
     }
     50% {
-        transform: scale(1.05);
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
