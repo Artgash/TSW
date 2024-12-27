@@ -45,20 +45,32 @@ body {
 
 /* Hero Section */
 .hero {
+    background: #f4f4f9; /* Light gray background for hero section */
+    color: #333;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+.hero-content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    background-color: #ffffff; /* White background for hero section */
-    height: 50vh;
-    position: relative;
+    gap: 1rem;
 }
 .hero-img {
-    width: 100%;
-    max-width: 1500px;
-    height: 700px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+    width: 400px; /* Fixed image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+.hero-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #002868; /* Deep blue */
+}
+.hero-text {
+    font-size: 1rem;
+    max-width: 600px;
+    line-height: 1.5;
 }
 
 /* Content Section */
@@ -106,7 +118,7 @@ body {
     padding: 1rem;
 }
 
-/* Responsive Design for Smaller Screens */
+/* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -117,7 +129,14 @@ body {
         gap: 0.5rem;
     }
     .hero {
-        height: auto;
+        padding: 1rem;
+    }
+    .hero-img {
+        width: 100%; /* Make the image responsive */
+        max-width: 300px; /* Prevent stretching */
+    }
+    .hero-title {
+        font-size: 1.5rem;
     }
     .content {
         margin: 1rem;
