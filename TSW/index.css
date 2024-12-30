@@ -138,6 +138,9 @@ body {
 
 /* ================== MEDIA QUERIES ================== */
 @media (max-width: 768px) {
+    .hero {
+        padding: 0 1.5rem;
+    }
     .hero h1 {
         font-size: 3rem;
     }
@@ -146,6 +149,10 @@ body {
     }
     .hero .btn-cta {
         font-size: 0.9rem;
+        padding: 0.7rem 1.5rem;
+    }
+    .navbar {
+        padding: 0.8rem 1.5rem;
     }
     .navbar nav ul {
         gap: 1rem;
@@ -153,10 +160,24 @@ body {
 }
 
 @media (max-width: 480px) {
+    .hero {
+        padding: 0 1rem;
+    }
     .hero h1 {
         font-size: 2.5rem;
     }
     .hero p {
         font-size: 1rem;
+    }
+    .hero .btn-cta {
+        font-size: 0.8rem;
+        padding: 0.6rem 1.2rem;
+    }
+    .navbar nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .navbar .logo img {
+        width: 50px;
     }
 }
