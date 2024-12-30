@@ -88,6 +88,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
+    padding: 0 20px; /* Added padding for better spacing */
 }
 
 /* News Item */
@@ -146,19 +147,63 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .news-container {
-        grid-template-columns: 1fr;
+    /* Navbar adjustments for smaller screens */
+    .navbar ul {
+        flex-direction: column;
+        gap: 15px;
     }
 
+    /* Coming Soon Section */
     .coming-soon h1 {
         font-size: 2.5em;
     }
 
+    /* News Container */
+    .news-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    /* News Item adjustments */
     .news-item h3 {
         font-size: 1.4em;
     }
 
     .news-item p {
         font-size: 1em;
+    }
+
+    /* Adjusting News Item Padding */
+    .news-item .news-content {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Navbar adjustments for very small screens */
+    .navbar ul {
+        gap: 10px;
+    }
+
+    /* Coming Soon Section */
+    .coming-soon h1 {
+        font-size: 2em;
+    }
+
+    /* News Container */
+    .news-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    /* News Item adjustments */
+    .news-item h3 {
+        font-size: 1.2em;
+    }
+
+    .news-item p {
+        font-size: 0.9em;
     }
 }
