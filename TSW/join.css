@@ -122,4 +122,106 @@ body {
     width: 100%;
     height: 100%;
     z-index: 1;
-    pointer-events
+    pointer-events: none;
+}
+.thunder {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: white;
+    opacity: 0;
+    animation: thunder-strike 3s infinite ease-in-out;
+}
+.thunder:nth-child(1) {
+    left: 20%;
+    animation-delay: 0.5s;
+}
+.thunder:nth-child(2) {
+    left: 50%;
+    animation-delay: 1s;
+}
+.thunder:nth-child(3) {
+    left: 80%;
+    animation-delay: 1.5s;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #222;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+/* Animations */
+@keyframes text-flicker {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+@keyframes logo-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes thunder-strike {
+    0%, 50%, 100% { opacity: 0; }
+    25% { opacity: 1; }
+    50% { height: 100%; }
+    100% { height: 0; }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .navbar nav ul {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    .navbar nav ul li {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+    .hero {
+        padding: 3rem 2rem;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+    }
+    .join-btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.8rem 1.5rem;
+    }
+    .navbar nav ul {
+        gap: 1rem;
+    }
+    .hero {
+        padding: 2rem 1rem;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .join-btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.2rem;
+    }
+}
