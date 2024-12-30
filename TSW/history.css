@@ -142,4 +142,7 @@ body {
         margin: 1rem;
         padding: 1.5rem;
     }
+    .section h3 {
+        font-size: 1.3rem;
+    }
 }
