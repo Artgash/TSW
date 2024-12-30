@@ -122,3 +122,76 @@ body {
     text-align: center;
     padding: 1rem;
 }
+
+/* Responsive Design */
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .hero {
+        height: 40vh;
+        font-size: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .teams {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .teams h2 {
+        font-size: 1.5rem;
+    }
+
+    .join-us {
+        padding: 1.5rem;
+    }
+
+    .btn-join {
+        padding: 0.6rem 1.5rem;
+    }
+
+    .footer {
+        padding: 1rem;
+    }
+}
+
+/* Very Small Screens (Phones) */
+@media (max-width: 480px) {
+    .navbar .logo {
+        font-size: 1.2rem;
+    }
+
+    .navbar ul {
+        gap: 0.3rem;
+    }
+
+    .hero {
+        height: 35vh;
+        font-size: 1.2rem;
+    }
+
+    .teams h2 {
+        font-size: 1.4rem;
+    }
+
+    .join-us h2 {
+        font-size: 1.6rem;
+    }
+
+    .btn-join {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
